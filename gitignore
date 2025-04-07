@@ -1,0 +1,22 @@
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Backup e temporanei
+*.swp
+*.bak
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+
+# IDE/editor
+.vscode/
+.idea/
+*.code-workspace
+
+# Altri file
+.env
+*.log
