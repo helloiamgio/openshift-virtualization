@@ -1,12 +1,6 @@
 
 # OpenShift Virtualization Overview
 
-![GitHub last commit](https://img.shields.io/github/last-commit/your-username/openshift-virtualization-demo?style=flat-square)
-![GitHub repo size](https://img.shields.io/github/repo-size/your-username/openshift-virtualization-demo?style=flat-square)
-![GitHub license](https://img.shields.io/github/license/your-username/openshift-virtualization-demo?style=flat-square)
-
----
-
 ## 📌 Cos'è
 
 OpenShift Virtualization ti permette di eseguire **macchine virtuali (VM)** all'interno del tuo cluster **Kubernetes/OpenShift**, grazie al progetto [KubeVirt](https://kubevirt.io/).  
@@ -92,7 +86,7 @@ spec:
 ## 📘 Documento PDF
 
 Per una lettura offline:  
-[📄 Scarica il PDF](openshift_virtualization_overview.pdf)
+[📄 Scarica il PDF](Managing Virtual Machines with Red Hat OpenShift Virtualization (DO316)-4.16-student-guide.pdf)
 
 ---
 
