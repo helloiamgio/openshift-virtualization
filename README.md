@@ -86,7 +86,7 @@ spec:
 ## 📘 Documento PDF
 
 Per una lettura offline:  
-[📄 Scarica il PDF](Managing Virtual Machines with Red Hat OpenShift Virtualization (DO316)-4.16-student-guide.pdf)
+[📄 Scarica il PDF](Managing Virtual Machines with Red Hat OpenShift Virtualization.pdf)
 
 ---
 
