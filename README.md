@@ -8,31 +8,36 @@ Gestisci container e VM con un'unica piattaforma!
 
 ---
 
-## 🧱 Componenti Principali
+## 🧱 Componenti Principali di OpenShift Virtualization
 
-- **HyperConverged Operator (HCO)**  
-  L'operatore principale che installa e gestisce tutte le altre componenti.
+### 1. **HyperConverged Operator (HCO)**
+L'**HCO** è l'operatore principale che semplifica l’installazione, l’aggiornamento e la gestione di tutti gli altri componenti necessari per la virtualizzazione all'interno di OpenShift.  
+Funziona come un orchestratore centralizzato, garantendo che tutti gli operatori e le risorse siano configurati e funzionanti correttamente.
 
-- **KubeVirt Operator**  
-  Installa e aggiorna i componenti fondamentali per eseguire le VM.
+### 2. **KubeVirt**
+**KubeVirt** è un’estensione di Kubernetes che permette di eseguire e gestire macchine virtuali (VM) come risorse native di Kubernetes.  
+In OpenShift Virtualization, consente di eseguire VM accanto ai container, utilizzando le stesse interfacce e strumenti di gestione.
 
-- **CDI (Containerized Data Importer)**  
-  Permette di importare immagini disco e ISO per creare VM.
+### 3. **Containerized Data Importer (CDI)**
+Il **CDI** è responsabile dell’importazione e della clonazione di immagini disco per le VM.  
+Facilita il provisioning delle VM importando immagini da varie fonti (es. URL HTTP o PVC esistenti) e automatizza la preparazione dello storage.
 
-- **Network Addons + Multus CNI**  
-  Aggiungono funzionalità di rete avanzate, come NIC multiple per VM.
+### 4. **Network Addons e Multus CNI**
+- **Network Addons**: Fornisce componenti di rete aggiuntivi per migliorare le capacità di networking di OpenShift, come supporto per diversi plugin.
+- **Multus CNI**: Meta-plugin per Kubernetes che consente a una VM (o pod) di avere più interfacce di rete, abilitando configurazioni avanzate.
 
-- **virt-controller**  
-  Controlla lo stato delle VM e coordina la loro esecuzione.
+### 5. **Componenti di KubeVirt**
+- **virt-controller**: Gestisce il ciclo di vita delle VM, mantenendone lo stato desiderato.
+- **virt-api**: Espone un’API RESTful per la gestione delle VM.
+- **virt-handler**: Agente presente su ogni nodo, gestisce localmente le VM (es. avvio/stop).
+- **virt-launcher**: Pod dedicato che esegue effettivamente la VM con QEMU/KVM. Ogni VM ha il suo pod per isolamento e sicurezza.
 
-- **virt-api**  
-  Espone le API REST per interagire con le VM.
+### 6. **VirtualMachine (VM) Custom Resource**
+Una VM in OpenShift è rappresentata come una CRD (Custom Resource Definition), permettendo di definire e gestire VM come normali risorse Kubernetes.
 
-- **virt-handler**  
-  Gira su ogni nodo del cluster e gestisce le VM attive.
+---
 
-- **virt-launcher**  
-  Pod isolato per ogni VM, contiene `libvirt/QEMU`.
+Questi componenti lavorano insieme per integrare le VM nel mondo Kubernetes/OpenShift, fornendo una piattaforma unificata per gestire sia carichi di lavoro containerizzati che virtualizzati.
 
 ---
 
