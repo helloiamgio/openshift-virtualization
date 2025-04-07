@@ -90,45 +90,6 @@ Per una lettura offline:
 
 ---
 
-## 🌐 Demo GitHub Pages
-
-Se vuoi pubblicare una versione online:  
-**https://your-username.github.io/openshift-virtualization-demo/**
-
-Sostituisci `your-username` con il tuo GitHub username e attiva GitHub Pages dalla sezione `Settings > Pages` selezionando la branch `main` e la cartella root (`/`).
-
----
-
-## 🚀 Come creare la repo GitHub
-
-1. Vai su [https://github.com/new](https://github.com/new)
-2. Inserisci il nome: `openshift-virtualization-demo`
-3. Metti la repo pubblica (o privata se preferisci)
-4. Clicca su **Create repository**
-5. Clona la repo sul tuo PC:
-
-```bash
-git clone https://github.com/your-username/openshift-virtualization-demo.git
-cd openshift-virtualization-demo
-```
-
-6. Copia dentro questi file:
-   - `README.md`
-   - `openshift_virtualization_architecture.png`
-   - `openshift_virtualization_overview.pdf`
-
-7. Esegui il push:
-
-```bash
-git add .
-git commit -m "Initial commit with diagram and documentation"
-git push origin main
-```
-
-8. (Opzionale) Attiva **GitHub Pages** come descritto sopra ✅
-
----
-
 ## 🧪 Provalo!
 
 Puoi usare [Minikube](https://minikube.sigs.k8s.io/) o [KIND](https://kind.sigs.k8s.io/) insieme a KubeVirt per sperimentare tutto in locale 🚀
