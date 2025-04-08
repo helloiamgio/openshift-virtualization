@@ -86,30 +86,30 @@ spec:
               chpasswd: { expire: False }
 ```
 
----
 ## 🔌 Serial Console vs VNC: Differenze chiave
 
-| Caratteristica         | **Serial Console**                          | **VNC (Virtual Network Computing)**                     |
-|------------------------|--------------------------------------------|----------------------------------------------------------|
-| 🖥️ Tipo di interfaccia | Testuale (CLI)                              | Grafica (GUI, come un desktop remoto)                   |
-| 📡 Protocollo           | Testo puro su porta seriale virtuale       | Protocollo VNC (basato su framebuffer grafico)          |
-| 🔧 Uso principale       | Debug, installazioni minime, login SSH     | Desktop remoto, installazioni GUI, troubleshooting grafico |
-| 🐚 Esperienza           | Simile a un terminale seriale (ttyS0)      | Simile a guardare lo schermo del sistema guest          |
-| ⚙️ Requisiti            | Nessuno, funziona anche senza server grafico| Richiede interfaccia grafica installata nella VM        |
-| 🚀 Velocità/leggerezza  | Leggerissima, molto performante            | Più pesante, usa più risorse                            |
-| 📦 Supporto su OpenShift | Integrata (`virtctl console`)              | Integrata via console web GUI                           |
+| **Caratteristica**        | **Serial Console**                              | **VNC (Virtual Network Computing)**                         |
+|---------------------------|--------------------------------------------------|-------------------------------------------------------------|
+| 🖥️ Tipo di interfaccia     | Testuale (CLI)                                   | Grafica (GUI, come un desktop remoto)                       |
+| 📡 Protocollo              | Testo puro su porta seriale virtuale            | Protocollo VNC (basato su framebuffer grafico)              |
+| 🔧 Uso principale          | Debug, installazioni minime, login SSH          | Desktop remoto, installazioni GUI, troubleshooting grafico  |
+| 🐚 Esperienza              | Simile a un terminale seriale (ttyS0)           | Simile a guardare lo schermo del sistema guest              |
+| ⚙️ Requisiti               | Nessuno, funziona anche senza server grafico    | Richiede interfaccia grafica installata nella VM            |
+| 🚀 Prestazioni             | Leggerissima, molto performante                 | Più pesante, usa più risorse                                |
+| 📦 Supporto su OpenShift   | Integrata (`virtctl console`)                   | Integrata via console web GUI                               |
 
 ---
 
 ## 🧠 Quando usare l’una o l’altra?
 
 ### ✅ Serial Console
-- Quando la VM **non ha un'interfaccia grafica**
-- Per accedere a **sistemi minimalisti** (es. Alpine, Fedora CoreOS)
-- Durante **boot/debug** in modalità testo
-- Per **script automatici** o provisioning
+Utilissima quando:
+- La VM **non ha un'interfaccia grafica**
+- Usi sistemi **minimalisti** (es. Alpine, Fedora CoreOS)
+- Sei in fase di **boot/debug/testo**
+- Vuoi **automatizzare provisioning** o script via shell
 
-Puoi accedere con il comando:
+**Comando di accesso:**
 ```bash
 virtctl console <vm-name>
 
