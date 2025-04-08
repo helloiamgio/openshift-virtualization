@@ -113,12 +113,12 @@ Puoi accedere con il comando:
 ```bash
 virtctl console <vm-name>
 
+---
+
 ## 📘 Documento PDF
 
 Per una lettura offline:  
 [📄 Scarica il PDF](Managing-Virtual-Machines-with-Red-Hat-OpenShift-Virtualization.pdf)
-
----
 
 ## 🧪 Provalo!
 
