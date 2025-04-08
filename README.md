@@ -112,7 +112,6 @@ spec:
 Puoi accedere con il comando:
 ```bash
 virtctl console <vm-name>
----
 
 ## 📘 Documento PDF
 
