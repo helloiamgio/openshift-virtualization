@@ -112,6 +112,7 @@ Utilissima quando:
 **Comando di accesso:**
 ```bash
 virtctl console <vm-name>
+```
 
 ---
 
